@@ -2,6 +2,8 @@
 set -e
 
 # export these variables
+declare -x GoNotoHighUsageScriptsRegular
+declare -x GoNotoHighUsageScriptsBold
 declare -x GoNotoAncient
 declare -x GoNotoCurrentRegular
 declare -x GoNotoCurrentSerif
@@ -289,6 +291,28 @@ GoNotoCurrentBold=(
     "NotoSansSymbols2-Regular.ttf" # No bold
     "NotoSansMathSubset-Regular.ttf" # No bold
     "NotoMusic-Regular.ttf" # No bold
+)
+
+GoNotoHighUsageScriptsRegular=(
+    "NotoSans-Regular.ttf" # Base font with Latin, Greek, Cyrillic, etc.
+    "NotoSansCJKjpSubset-Regular.ttf" # Japanese
+    "NotoSansArabic-Regular.ttf" # Arabic, Urdu, Pashto, etc.
+    "NotoSansCJKscSubset-Regular.ttf" # Simplified Chinese
+    "NotoSansCJKkrSubset-Regular.ttf" # Korean
+    "NotoSansDevanagari-Regular.ttf" # Hindi, Marathi, Nepali, etc.
+    "NotoSansHebrew-Regular.ttf" # Hebrew
+    "NotoSansThai-Regular.ttf" # Thai
+)
+
+GoNotoHighUsageScriptsBold=(
+    "NotoSans-Bold.ttf" # Base font with Latin, Greek, Cyrillic, etc.
+    "NotoSansCJKjpSubset-Bold.ttf" # Japanese
+    "NotoSansArabic-SemiBold.ttf" # Arabic, Urdu, Pashto, etc.
+    "NotoSansCJKscSubset-Bold.ttf" # Simplified Chinese
+    "NotoSansCJKkrSubset-Bold.ttf" # Korean
+    "NotoSansDevanagari-Bold.ttf" # Hindi, Marathi, Nepali, etc.
+    "NotoSansHebrew-Bold.ttf" # Hebrew
+    "NotoSansThai-Bold.ttf" # Thai
 )
 
 GoNotoAfricaMiddleEast=(
