@@ -48,7 +48,7 @@ jobs:
       - name: Upload generated fonts
         uses: actions/upload-artifact@v4
         with:
-          name: GoNotoTemporalFonts.zip
+          name: GoNotoTemporalFonts
           path: |
               *.ttf
               *.otf
