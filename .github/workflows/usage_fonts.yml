@@ -1,4 +1,4 @@
-name: Regional fonts
+name: Usage fonts
 
 # Controls when the workflow will run
 on:
@@ -31,24 +31,24 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Create regional fonts
+      - name: Create usage fonts
         run: |
             python3 -m venv venv
             source venv/bin/activate
-            ./regional_fonts.sh
+            ./usage_fonts.sh
             deactivate
 
       - name: Collect font statistics
         run: |
             source venv/bin/activate
             source helper.sh
-            collect_font_statistics > stats_regional_fonts.tsv
+            collect_font_statistics > stats_usage_fonts.tsv
             deactivate
 
       - name: Upload generated fonts
         uses: actions/upload-artifact@v3
         with:
-          name: GoNotoRegionalFonts.zip
+          name: GoNotoUsageFonts.zip
           path: |
               *.ttf
               *.otf
