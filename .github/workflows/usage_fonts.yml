@@ -46,7 +46,7 @@ jobs:
             deactivate
 
       - name: Upload generated fonts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: GoNotoUsageFonts.zip
           path: |
