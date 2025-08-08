@@ -1,4 +1,4 @@
-name: Temporal fonts
+name: Usage fonts
 
 # Controls when the workflow will run
 on:
@@ -31,24 +31,24 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Create temporal fonts
+      - name: Create usage fonts
         run: |
             python3 -m venv venv
             source venv/bin/activate
-            ./temporal_fonts.sh
+            ./usage_fonts.sh
             deactivate
 
       - name: Collect font statistics
         run: |
             source venv/bin/activate
             source helper.sh
-            collect_font_statistics > stats_temporal_fonts.tsv
+            collect_font_statistics > stats_usage_fonts.tsv
             deactivate
 
       - name: Upload generated fonts
         uses: actions/upload-artifact@v4
         with:
-          name: GoNotoTemporalFonts
+          name: GoNotoUsageFonts
           path: |
               *.ttf
               *.otf
