@@ -4,7 +4,7 @@ Noto Fonts go universal! Did you ever want "one font for all languages"? Downloa
 Fonts](https://github.com/googlefonts/noto-fonts) merged according to the time of usage (current,
 ancient) or geographical region (Africa-MiddleEast, Europe-Americas, South Asia, SE Asia).
 
-We offer two types of combined fonts:
+We offer three types of combined fonts:
 
 1. Time-based:  
    - **GoNotoKurrent** covers pretty much all the scripts in current, widespread use all over the
@@ -14,6 +14,8 @@ We offer two types of combined fonts:
 2. Region-based:  
    Choose a single font based on where you live or whichever region you're interested in:
    Africa - Middle East, East Asia, Europe - Americas, South Asia or South East Asia.
+3. High-usage:
+   A font targetting the most used scripts on the internet (based on [wikipedia most-used statistics](https://en.wikipedia.org/wiki/Languages_used_on_the_Internet)) and based on the CJK Core.
 
 See [caveats](#caveats) too.
 
@@ -43,6 +45,7 @@ python3 -m venv venv_fonty
 source venv_fonty/bin/activate
 ./temporal_fonts.sh  # generates GoNotoAncient.ttf and GoNotoCurrent.ttf
 ./regional_fonts.sh  # generates GoNoto[AfricaMiddleEast|EuropeAmericas|...].ttf
+./usage_fonts.sh     # generates GoNotoHighUsageScriptsRegular.ttf and GoNotoHighUsageScriptsBold.ttf
 deactivate
 ```
 
